@@ -4,11 +4,11 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2020/04/17/hello-world/"/>
-    <url>/2020/04/17/hello-world/</url>
+    <title>Git学习---初识版本控制系统</title>
+    <link href="/2020/04/18/first/"/>
+    <url>/2020/04/18/first/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="hljs bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="hljs bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="hljs bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>Git下载地址：</strong><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a></p><p>安装完成后，还需要进行设置你的名字和Email地址<br>打开Git Bash：</p><pre><code class="hljs bash">$ git config --global user.name <span class="hljs-string">"AnSheng"</span>  //设置用户名字为AnSheng$ git config --global user.email <span class="hljs-string">"859098570qq.com"</span> //设置Email地址为859098570qq.com</code></pre><p>创建本地版本库：<br>在需要创建库的地方，点击鼠标右键，选择Git bash here；打开命令行窗口。<br>执行命令： <code>$ git init</code><br><img src="https://img-blog.csdnimg.cn/20200416224708283.png" srcset="/img/loading.gif" alt="创建版本库"><br>如图，即将d盘下的learngit目录变成了Git可以管理的仓库了。</p>]]></content>
     
     
     
