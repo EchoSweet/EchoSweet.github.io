@@ -177,6 +177,54 @@
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/04/22/sqlerror/">使用TRUNCATE TABLE清空数据时出现Cannot truncate a table referenced in a foreign key constraint</a>
+
+      <a href="/2020/04/22/sqlerror/" class="index-excerpt">
+        
+        
+          
+        
+        <div>使用TRUNCATE TABLE 清空数据时出现以下错误：为什么会出现这种错误呢？
+
+经过测试是因为使用TRUNCATE TABLE 命令对被引用做外键的主表进行数据清空时，无论主表里的数据是否被引用，都会出现这种错误。
+
+解决办法：
+
+先把外键约束关闭，清空后在打开即可。
+SET FOREIGN_KEY_CHECKS = 0;   //先归0
+TRUNCATE 表名;              </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-04-22
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%B8%A9%E5%9D%91/">踩坑</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Mysql/">Mysql</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
       <a class="index-header" href="/2020/04/22/javascript-insert/">JavaScript对HTML元素的增加与删除实训</a>
 
       <a href="/2020/04/22/javascript-insert/" class="index-excerpt">
