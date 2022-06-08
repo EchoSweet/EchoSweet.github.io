@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>使用TRUNCATE TABLE清空数据时出现Cannot truncate a table referenced in a foreign key constraint</title>
+    <link href="/2020/04/22/sqlerror/"/>
+    <url>/2020/04/22/sqlerror/</url>
+    
+    <content type="html"><![CDATA[<p><strong>使用TRUNCATE TABLE 清空数据时出现以下错误：</strong><br><img src="https://img-blog.csdnimg.cn/20200422171903325.png" srcset="/img/loading.gif" alt="Error"><br><strong>为什么会出现这种错误呢？</strong></p><ul><li>经过测试是因为使用TRUNCATE TABLE 命令对被引用做外键的主表进行数据清空时，无论主表里的数据是否被引用，都会出现这种错误。</li></ul><p><strong>解决办法：</strong></p><ol><li><p><strong>先把外键约束关闭，清空后在打开即可</strong>。</p><pre><code class="hljs bash">SET FOREIGN_KEY_CHECKS = 0;   //先归0TRUNCATE 表名;              //在清除数据SET FOREIGN_KEY_CHECKS = 1;   //然后设置1</code></pre><p>但是，使用上述方法不能保证数据安全性，如果从表引用了主表数据，它也会把主表所有数据给清空，不建议使用。</p></li><li><p><strong>使用DELETE进行清空数据，它会对数据进行检查，如果被引用的话会有提示</strong></p></li></ol><pre><code class="hljs bash">DELETE FROM 表名</code></pre><blockquote><p>所以对具有<strong>外键约束</strong>的主表数据进行删除时直接使用第二种方法对数据进行删除即可。</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>踩坑</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Mysql</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
